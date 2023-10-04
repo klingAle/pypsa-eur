@@ -240,6 +240,7 @@ rule build_energy_totals:
     params:
         countries=config["countries"],
         energy=config["energy"],
+
     input:
         nuts3_shapes=RESOURCES + "nuts3_shapes.geojson",
         co2="data/eea/UNFCCC_v23.csv",
@@ -426,7 +427,7 @@ rule build_industry_sector_ratios:
         "../scripts/build_industry_sector_ratios.py"
 
 
-rule build_industrial_production_per_country:
+'''rule build_industrial_production_per_country:
     params:
         industry=config["industry"],
         countries=config["countries"],
@@ -448,13 +449,13 @@ rule build_industrial_production_per_country:
         "../envs/environment.yaml"
     script:
         "../scripts/build_industrial_production_per_country.py"
-
+'''
 
 rule build_industrial_production_per_country_tomorrow:
     params:
         industry=config["industry"],
     input:
-        industrial_production_per_country=RESOURCES
+        industrial_production_per_country=SCENARIO_DATA
         + "industrial_production_per_country.csv",
     output:
         industrial_production_per_country_tomorrow=RESOURCES
@@ -560,7 +561,7 @@ rule build_industrial_energy_demand_per_country_today:
     input:
         jrc="data/jrc-idees-2015",
         ammonia_production=RESOURCES + "ammonia_production.csv",
-        industrial_production_per_country=RESOURCES
+        industrial_production_per_country=SCENARIO_DATA
         + "industrial_production_per_country.csv",
     output:
         industrial_energy_demand_per_country_today=RESOURCES
@@ -641,7 +642,7 @@ if not config["sector"]["retrofitting"]["retro_endogen"]:
 
 rule build_population_weighted_energy_totals:
     input:
-        energy_totals=RESOURCES + "energy_totals.csv",
+        energy_totals=SCENARIO_DATA + "energy_totals.csv",
         clustered_pop_layout=RESOURCES + "pop_layout_elec_s{simpl}_{clusters}.csv",
     output:
         RESOURCES + "pop_weighted_energy_totals_s{simpl}_{clusters}.csv",
@@ -661,7 +662,7 @@ rule build_shipping_demand:
         ports="data/attributed_ports.json",
         scope=RESOURCES + "europe_shape.geojson",
         regions=RESOURCES + "regions_onshore_elec_s{simpl}_{clusters}.geojson",
-        demand=RESOURCES + "energy_totals.csv",
+        demand=SCENARIO_DATA + "energy_totals.csv",
     output:
         RESOURCES + "shipping_demand_s{simpl}_{clusters}.csv",
     threads: 1
@@ -683,7 +684,7 @@ rule build_transport_demand:
         clustered_pop_layout=RESOURCES + "pop_layout_elec_s{simpl}_{clusters}.csv",
         pop_weighted_energy_totals=RESOURCES
         + "pop_weighted_energy_totals_s{simpl}_{clusters}.csv",
-        transport_data=RESOURCES + "transport_data.csv",
+        transport_data=SCENARIO_DATA + "transport_data.csv",
         traffic_data_KFZ="data/emobility/KFZ__count",
         traffic_data_Pkw="data/emobility/Pkw__count",
         temp_air_total=RESOURCES + "temp_air_total_elec_s{simpl}_{clusters}.nc",
@@ -724,7 +725,7 @@ rule prepare_sector_network:
         **gas_infrastructure,
         **build_sequestration_potentials_output,
         network=RESOURCES + "networks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}.nc",
-        energy_totals_name=RESOURCES + "energy_totals.csv",
+        energy_totals_name=SCENARIO_DATA + "energy_totals.csv",
         eurostat=input_eurostat,
         pop_weighted_energy_totals=RESOURCES
         + "pop_weighted_energy_totals_s{simpl}_{clusters}.csv",
