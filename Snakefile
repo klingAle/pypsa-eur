@@ -30,12 +30,15 @@ CDIR = RDIR if not run.get("shared_cutouts") else ""
 
 LOGS = "logs/" + RDIR
 BENCHMARKS = "benchmarks/" + RDIR
+SCENARIO_DATA = "scenario_data/" + RDIR
 RESOURCES = "resources/" + RDIR if not run.get("shared_resources") else "resources/"
 RESULTS = "results/" + RDIR
 
+#
+SCENARIO = config["scenario_name"]
 
 localrules:
-    purge,
+    #purge,
 
 
 wildcard_constraints:
