@@ -27,7 +27,7 @@ run:
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#foresight
 foresight: overnight
-scenario_name: SU3
+scenario_name: GG2
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#scenario
 # Wildcard docs in https://pypsa-eur.readthedocs.io/en/latest/wildcards.html
@@ -45,7 +45,7 @@ scenario:
   opts:
   - ''
   sector_opts:
-  - Co2L0-3H-T-H-B-I-A-solar+p.75-onwind+p0.75-offwind+p0.75
+  - Co2L0-3H-T-H-B-I-A
   planning_horizons:
   # - 2020
   # - 2030
@@ -280,7 +280,7 @@ load:
   interpolate_limit: 3
   time_shift_for_large_gaps: 1w
   manual_adjustments: true # false
-  scaling_factor: 0.69
+  scaling_factor: 1.37
 
 # docs
 # TODO: PyPSA-Eur merge issue in prepare_sector_network.py
@@ -314,7 +314,7 @@ energy:
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#biomass
 biomass:
   year: 2030
-  scenario: ENS_Low
+  scenario: ENS_Med
   classes:
     solid biomass:
     - Agricultural waste
