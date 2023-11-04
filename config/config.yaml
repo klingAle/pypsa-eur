@@ -27,7 +27,7 @@ run:
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#foresight
 foresight: overnight
-scenario_name: GG2
+scenario_name: SU3
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#scenario
 # Wildcard docs in https://pypsa-eur.readthedocs.io/en/latest/wildcards.html
@@ -37,7 +37,7 @@ scenario:
   ll:
   - v1.5
   clusters:
-  - 37
+  - 39
   #- 128
   #- 256
   #- 512
@@ -45,7 +45,7 @@ scenario:
   opts:
   - ''
   sector_opts:
-  - Co2L0-1H-T-H-B-I-A-solar+p3-dist1
+  - Co2L0-3H-T-H-B-I-A-solar+p.75-onwind+p0.75-offwind+p0.75
   planning_horizons:
   # - 2020
   # - 2030
@@ -53,7 +53,20 @@ scenario:
   - 2050
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#countries
-countries: ['AL', 'AT', 'BA', 'BE', 'BG', 'CH', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'ME', 'MK', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SE', 'SI', 'SK']
+countries: ['DE', 'NL', 'FR', 'BE', 'LU', 'DK', 'AT', 'CZ', 'CH', 'PL']
+
+focus_weights:
+  DE: 0.76923
+  FR: 0.02564
+  NL: 0.02564
+  BE: 0.02564
+  LU: 0.02564
+  DK: 0.02564
+  AT: 0.02564
+  CZ: 0.02564
+  CH: 0.02564
+  PL: 0.02564
+
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#snapshots
 snapshots:
@@ -267,7 +280,7 @@ load:
   interpolate_limit: 3
   time_shift_for_large_gaps: 1w
   manual_adjustments: true # false
-  scaling_factor: 0.68
+  scaling_factor: 0.69
 
 # docs
 # TODO: PyPSA-Eur merge issue in prepare_sector_network.py
@@ -301,7 +314,7 @@ energy:
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#biomass
 biomass:
   year: 2030
-  scenario: ENS_Med
+  scenario: ENS_Low
   classes:
     solid biomass:
     - Agricultural waste
@@ -416,7 +429,7 @@ sector:
   HVC_demand_factor: 1.
   time_dep_hp_cop: true
   heat_pump_sink_T: 55.
-  reduce_space_heat_exogenously: true
+  reduce_space_heat_exogenously: false
   reduce_space_heat_exogenously_factor:
     2020: 0.10  # this results in a space heat demand reduction of 10%
     2025: 0.09  # first heat demand increases compared to 2020 because of larger floor area per capita
@@ -438,9 +451,9 @@ sector:
     central: 180
   boilers: true
   oil_boilers: false
-  biomass_boiler: true
+  biomass_boiler: false
   chp: true
-  micro_chp: false
+  micro_chp: true
   solar_thermal: true
   solar_cf_correction: 0.788457  # =  >>> 1/1.2683
   marginal_cost_storage: 0. #1e-4
@@ -451,7 +464,7 @@ sector:
   co2_vent: false
   allam_cycle: false
   hydrogen_fuel_cell: true
-  hydrogen_turbine: false
+  hydrogen_turbine: true
   SMR: true
   regional_co2_sequestration_potential:
     enable: false
@@ -465,7 +478,7 @@ sector:
   co2_spatial: false
   co2network: false
   cc_fraction: 0.9
-  hydrogen_underground_storage: true
+  hydrogen_underground_storage: false
   hydrogen_underground_storage_locations:
     # - onshore  # more than 50 km from sea
   - nearshore    # within 50 km of sea
@@ -480,8 +493,8 @@ sector:
   electricity_distribution_grid_cost_factor: 1.0
   electricity_grid_connection: true
   H2_network: true
-  gas_network: false
-  H2_retrofit: false
+  gas_network: true
+  H2_retrofit: true
   H2_retrofit_capacity_per_CH4: 0.6
   gas_network_connectivity_upgrade: 1
   gas_distribution_grid: true
