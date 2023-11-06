@@ -451,7 +451,7 @@ sector:
     central: 180
   boilers: true
   oil_boilers: false
-  biomass_boiler: true
+  biomass_boiler: false
   chp: true
   micro_chp: false
   solar_thermal: true
