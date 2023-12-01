@@ -38,7 +38,7 @@ scenario:
   - v1.5
   - vopt
   clusters:
-  - 37
+  - 39
   #- 128
   #- 256
   #- 512
