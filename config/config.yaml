@@ -478,7 +478,7 @@ sector:
   co2_sequestration_cost: 20
   co2_spatial: false
   co2network: false
-  cc_fraction: 0.8
+  cc_fraction: 0.9
   hydrogen_underground_storage: false
   hydrogen_underground_storage_locations:
     # - onshore  # more than 50 km from sea
