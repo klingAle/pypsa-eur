@@ -46,7 +46,7 @@ scenario:
   opts:
   - ''
   sector_opts:
-  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.3
+  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5
   planning_horizons:
   # - 2020
   # - 2030
