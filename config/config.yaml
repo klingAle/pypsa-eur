@@ -281,7 +281,7 @@ load:
   interpolate_limit: 3
   time_shift_for_large_gaps: 1w
   manual_adjustments: true # false
-  scaling_factor: 1.37
+  scaling_factor: 0.7
 
 # docs
 # TODO: PyPSA-Eur merge issue in prepare_sector_network.py
