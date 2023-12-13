@@ -57,17 +57,17 @@ scenario:
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#countries
 countries: ['DE', 'NL', 'FR', 'BE', 'LU', 'DK', 'AT', 'CZ', 'CH', 'PL']
 
-'''focus_weights:
-  DE: 0.76923
-  FR: 0.02564
-  NL: 0.02564
-  BE: 0.02564
-  LU: 0.02564
-  DK: 0.02564
-  AT: 0.02564
-  CZ: 0.02564
-  CH: 0.02564
-  PL: 0.02564'''
+#focus_weights:
+#  DE: 0.76923
+#  FR: 0.02564
+#  NL: 0.02564
+#  BE: 0.02564
+#  LU: 0.02564
+#  DK: 0.02564
+#  AT: 0.02564
+#  CZ: 0.02564
+#  CH: 0.02564
+#  PL: 0.02564
 
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#snapshots
