@@ -315,7 +315,7 @@ energy:
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#biomass
 biomass:
   year: 2030
-  scenario: ENS_Med
+  scenario: ENS_Low
   classes:
     solid biomass:
     - Agricultural waste
