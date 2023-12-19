@@ -314,7 +314,7 @@ energy:
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#biomass
 biomass:
-  year: 2030
+  year: 2050
   scenario: ENS_Low
   classes:
     solid biomass:
