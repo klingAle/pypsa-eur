@@ -46,7 +46,11 @@ scenario:
   opts:
   - ''
   sector_opts:
-  - Co2L0-3H-T-H-B-I-A
+  - Co2L0-3H-T-H-B-I-A-seq1500
+  - Co2L0-3H-T-H-B-I-A-seq200
+  - Co2L0-3H-T-H-B-I-A-seq50
+#  - Co2L0-3H-T-H-B-I-A-seq50-
+
   planning_horizons:
   # - 2020
   # - 2030
