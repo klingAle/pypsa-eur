@@ -47,7 +47,7 @@ scenario:
   - ''
   sector_opts:
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq1500
-  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200
+  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200-gas_distribution+c9
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq50
   planning_horizons:
   # - 2020
@@ -502,7 +502,6 @@ sector:
   gas_network_connectivity_upgrade: 1
   gas_distribution_grid: true
   gas_distribution_grid_cost_factor:
-    - 10
     - 1
   biomass_spatial: true
   biomass_transport: false
