@@ -501,8 +501,7 @@ sector:
   H2_retrofit_capacity_per_CH4: 0.6
   gas_network_connectivity_upgrade: 1
   gas_distribution_grid: true
-  gas_distribution_grid_cost_factor:
-    - 1
+  gas_distribution_grid_cost_factor: 3
   biomass_spatial: true
   biomass_transport: false
   conventional_generation:
