@@ -36,7 +36,7 @@ scenario:
   - ''
   ll:
   - v1.5
-  - vopt
+  #- vopt
   clusters:
   - 37
   #- 128
@@ -46,7 +46,7 @@ scenario:
   opts:
   - ''
   sector_opts:
-  - Co2L0-3H-T-H-B-I-A
+  - Co2L0-3H-T-H-B-I-A-seq200
   planning_horizons:
   # - 2020
   # - 2030
@@ -499,8 +499,8 @@ sector:
   H2_retrofit_capacity_per_CH4: 0.6
   gas_network_connectivity_upgrade: 1
   gas_distribution_grid: true
-  gas_distribution_grid_cost_factor: 1.0
-  biomass_spatial: false
+  gas_distribution_grid_cost_factor: 3
+  biomass_spatial: true
   biomass_transport: false
   conventional_generation:
     OCGT: gas
