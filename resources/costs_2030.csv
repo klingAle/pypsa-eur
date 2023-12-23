@@ -645,7 +645,7 @@ fuel cell,efficiency,0.58,per unit,budischak2013,"12 LT-PEMFC CHP:  Electricity 
 fuel cell,investment,1100,EUR/kW_e,"Danish Energy Agency, technology_data_for_el_and_dh.xlsx",12 LT-PEMFC CHP:  Nominal investment,,
 fuel cell,lifetime,10,years,"Danish Energy Agency, technology_data_for_el_and_dh.xlsx",12 LT-PEMFC CHP:  Technical lifetime,,
 gas,CO2 intensity,0.2,tCO2/MWh_th,Stoichiometric calculation with 50 GJ/t CH4,,,
-gas,fuel,110,EUR/MWh_th,BP 2019,,,
+gas,fuel,75,EUR/MWh_th,BP 2019,,,
 gas boiler steam,FOM,4.18,%/year,"Danish Energy Agency, technology_data_for_industrial_process_heat.xlsx",311.1c Steam boiler Gas:  Fixed O&M,,
 gas boiler steam,VOM,1,EUR/MWh,"Danish Energy Agency, technology_data_for_industrial_process_heat.xlsx",311.1c Steam boiler Gas:  Variable O&M,,
 gas boiler steam,efficiency,0.93,per unit,"Danish Energy Agency, technology_data_for_industrial_process_heat.xlsx","311.1c Steam boiler Gas:  Total efficiency, net, annual average",,
