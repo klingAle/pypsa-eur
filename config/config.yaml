@@ -48,7 +48,7 @@ scenario:
   sector_opts:
   #- Co2L0-3H-T-H-B-I-A-seq1500
   - Co2L0-3H-T-H-B-I-A-seq200
-  - Co2L0-3H-T-H-B-I-A-seq200-noH2network
+  #- Co2L0-3H-T-H-B-I-A-seq200-noH2network
   #- Co2L0-3H-T-H-B-I-A-seq50-noH2network
 
   #- Co2L0-3H-T-H-B-I-A-seq35
@@ -591,6 +591,7 @@ costs:
     fuel cell: 0.
     battery: 0.
     battery inverter: 0.
+    gas: 85
   emission_prices:
     co2: 0.
 
