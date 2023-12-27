@@ -587,6 +587,7 @@ costs:
     fuel cell: 0.
     battery: 0.
     battery inverter: 0.
+    gas: 75.
   emission_prices:
     co2: 0.
 
