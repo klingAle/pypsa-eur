@@ -27,7 +27,7 @@ run:
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#foresight
 foresight: overnight
-scenario_name: SU2_alt
+scenario_name: GG2_alt
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#scenario
 # Wildcard docs in https://pypsa-eur.readthedocs.io/en/latest/wildcards.html
@@ -49,7 +49,6 @@ scenario:
   #- Co2L0-3H-T-H-B-I-A-seq1500
   - Co2L0-3H-T-H-B-I-A-seq200
   - Co2L0-3H-T-H-B-I-A-seq200-noH2network
-  - Co2L0-3H-T-H-B-I-A-seq70-noH2network
 
   #- Co2L0-3H-T-H-B-I-A-seq35
 
@@ -287,7 +286,7 @@ load:
   interpolate_limit: 3
   time_shift_for_large_gaps: 1w
   manual_adjustments: true # false
-  scaling_factor: 0.7
+  scaling_factor: 1.37
 
 # docs
 # TODO: PyPSA-Eur merge issue in prepare_sector_network.py
