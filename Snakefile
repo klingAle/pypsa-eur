@@ -14,7 +14,7 @@ from snakemake.utils import min_version
 min_version("7.7")
 
 
-if not exists("config/config.yaml"):
+if not exists("config/config.yaml") and exists("config/config.default.yaml"):
     copyfile("config/config.default.yaml", "config/config.yaml")
 
 
@@ -69,13 +69,31 @@ if config["foresight"] == "myopic":
     include: "rules/solve_myopic.smk"
 
 
+if config["foresight"] == "perfect":
+
+    include: "rules/solve_perfect.smk"
+
+
+rule all:
+    input:
+        RESULTS + "graphs/costs.pdf",
+    default_target: True
+
+
 rule purge:
-    message:
-        "Purging generated resources, results and docs. Downloads are kept."
     run:
-        #rmtree("resources/", ignore_errors=True)
-        rmtree("results/", ignore_errors=True)
-        rmtree("doc/_build", ignore_errors=True)
+        import builtins
+
+        do_purge = builtins.input(
+            "Do you really want to delete all generated resources, \nresults and docs (downloads are kept)? [y/N] "
+        )
+        if do_purge == "y":
+            rmtree("resources/", ignore_errors=True)
+            rmtree("results/", ignore_errors=True)
+            rmtree("doc/_build", ignore_errors=True)
+            print("Purging generated resources, results and docs. Downloads are kept.")
+        else:
+            raise Exception(f"Input {do_purge}. Aborting purge.")
 
 
 rule dag:
@@ -110,6 +128,7 @@ rule sync:
     shell:
         """
         rsync -uvarh --ignore-missing-args --files-from=.sync-send . {params.cluster}
+        rsync -uvarh --no-g {params.cluster}/resources . || echo "No resources directory, skipping rsync"
         rsync -uvarh --no-g {params.cluster}/results . || echo "No results directory, skipping rsync"
         rsync -uvarh --no-g {params.cluster}/logs . || echo "No logs directory, skipping rsync"
         """
