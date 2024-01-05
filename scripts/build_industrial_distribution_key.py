@@ -13,12 +13,13 @@ logger = logging.getLogger(__name__)
 import uuid
 from itertools import product
 
+import country_converter as coco
 import geopandas as gpd
 import pandas as pd
 from packaging.version import Version, parse
 
-import country_converter as coco
 cc = coco.CountryConverter()
+
 
 def locate_missing_industrial_sites(df):
     """
@@ -129,7 +130,7 @@ def build_nodal_distribution_key(hotmaps, regions, countries):
 
         if not facilities.empty:
             emissions = facilities["Emissions_ETS_2014"].fillna(
-                hotmaps["Emissions_EPRTR_2014"]
+                hotmaps["Emissions_EPRTR_2014"].dropna()
             )
             if emissions.sum() == 0:
                 key = pd.Series(1 / len(facilities), facilities.index)
@@ -153,7 +154,7 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "build_industrial_distribution_key",
             simpl="",
-            clusters=48,
+            clusters=128,
         )
 
     logging.basicConfig(level=snakemake.config["logging"]["level"])
