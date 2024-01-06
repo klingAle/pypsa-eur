@@ -2215,6 +2215,15 @@ def add_biomass(n, costs):
             + bus_transport_costs * average_distance,
         )
 
+        n.add(
+            "GlobalConstraint",
+            "biomass limit",
+            carrier_attribute="solid biomass",
+            sense="<=",
+            constant=biomass_potentials["solid biomass"].sum(),
+            type="operational_limit",
+        )
+
     # AC buses with district heating
     urban_central = n.buses.index[n.buses.carrier == "urban central heat"]
     if not urban_central.empty and options["chp"]:
