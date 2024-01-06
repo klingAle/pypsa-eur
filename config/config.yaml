@@ -36,7 +36,7 @@ scenario:
   - ''
   ll:
   - v1.5
-  - vopt
+  #- vopt
   clusters:
   - 39
   #- 128
@@ -47,10 +47,11 @@ scenario:
   - ''
   sector_opts:
   #- Co2L0-3H-T-H-B-I-A-seq1500
-  - Co2L0-3H-T-H-B-I-A-seq200
+  #- Co2L0-3H-T-H-B-I-A-seq200
   - Co2L0-3H-T-H-B-I-A-seq200-noH2network
   - Co2L0-3H-T-H-B-I-A-seq70-noH2network
-
+  - Co2L0-3H-T-H-B-I-A-seq50-noH2network
+  - Co2L0-3H-T-H-B-I-A-seq35-noH2network
   #- Co2L0-3H-T-H-B-I-A-seq35
 
   planning_horizons:
@@ -456,7 +457,7 @@ sector:
   tes_tau:
     decentral: 3
     central: 180
-  boilers: false
+  boilers: true
   oil_boilers: false
   biomass_boiler: false
   chp: true
@@ -467,7 +468,7 @@ sector:
   methanation: true
   helmeth: false
   coal_cc: false
-  dac: true
+  dac: false
   co2_vent: false
   allam_cycle: false
   hydrogen_fuel_cell: true
