@@ -2215,14 +2215,14 @@ def add_biomass(n, costs):
             + bus_transport_costs * average_distance,
         )
 
-        n.add(
-            "GlobalConstraint",
-            "biomass limit",
-            carrier_attribute="solid biomass",
-            sense="<=",
-            constant=biomass_potentials["solid biomass"].sum(),
-            type="operational_limit",
-        )
+    '''n.add(
+        "GlobalConstraint",
+        "oil limit",
+        carrier_attribute="solid biomass",
+        sense="<=",
+        constant=biomass_potentials["solid biomass"].sum(),
+        type="operational_limit",
+    )'''
 
     # AC buses with district heating
     urban_central = n.buses.index[n.buses.carrier == "urban central heat"]
@@ -2693,7 +2693,8 @@ def add_industry(n, costs):
             "Generator",
             spatial.oil.nodes,
             bus=spatial.oil.nodes,
-            p_nom_extendable=True,
+            p_nom_extendable=false,
+            p_nom=0,
             carrier="oil",
             marginal_cost=costs.at["oil", "fuel"],
         )
