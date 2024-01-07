@@ -466,7 +466,7 @@ sector:
   methanation: true
   helmeth: false
   coal_cc: false
-  dac: true
+  dac: false
   co2_vent: false
   allam_cycle: false
   hydrogen_fuel_cell: true
