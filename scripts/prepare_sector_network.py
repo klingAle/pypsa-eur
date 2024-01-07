@@ -2693,7 +2693,7 @@ def add_industry(n, costs):
             "Generator",
             spatial.oil.nodes,
             bus=spatial.oil.nodes,
-            p_nom_extendable=True,
+            p_nom_extendable=False,
             carrier="oil",
             marginal_cost=costs.at["oil", "fuel"],
         )
