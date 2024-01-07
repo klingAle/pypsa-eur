@@ -47,10 +47,12 @@ scenario:
   - ''
   sector_opts:
   #- Co2L0-3H-T-H-B-I-A-seq1500
-  - Co2L0-3H-T-H-B-I-A-seq200
-  - Co2L0-3H-T-H-B-I-A-seq70
-  - Co2L0-3H-T-H-B-I-A-seq50
-  - Co2L0-3H-T-H-B-I-A-seq40
+  #- Co2L0-3H-T-H-B-I-A-seq200
+  #- Co2L0-3H-T-H-B-I-A-seq70
+  #- Co2L0-3H-T-H-B-I-A-seq50
+  #- Co2L0-3H-T-H-B-I-A-seq40
+  - Co2L0-3H-T-H-B-I-A-seq20
+  - Co2L0-3H-T-H-B-I-A-seq10
 
   #- Co2L0-3H-T-H-B-I-A-seq200-noH2network
 
