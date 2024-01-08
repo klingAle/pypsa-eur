@@ -95,7 +95,7 @@ enable:
   retrieve_cost_data: false
   build_cutout: true
   retrieve_cutout: false
-  build_natura_raster: true
+  build_natura_raster: false
   retrieve_natura_raster: false
   custom_busmap: false
 
