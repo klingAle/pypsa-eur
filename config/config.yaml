@@ -91,7 +91,7 @@ enable:
   retrieve: auto
   prepare_links_p_nom: false
   retrieve_databundle: false
-  retrieve_sector_databundle: true
+  retrieve_sector_databundle: false
   retrieve_cost_data: false
   build_cutout: true
   retrieve_cutout: false
