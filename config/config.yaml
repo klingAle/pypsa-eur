@@ -96,7 +96,7 @@ enable:
   build_cutout: true
   retrieve_cutout: false
   build_natura_raster: false
-  retrieve_natura_raster: false
+  retrieve_natura_raster: true
   custom_busmap: false
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#co2-budget
