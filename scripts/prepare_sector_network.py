@@ -1212,7 +1212,7 @@ def add_storage_and_grids(n, costs):
 
         p_nom = gas_input_nodes.sum(axis=1).rename(lambda x: x + " gas")
         n.generators.loc[gas_i, "p_nom_extendable"] = False
-        n.generators.loc[gas_i, "p_nom"] = p_nom
+        n.generators.loc[gas_i, "p_nom"] = 0 #p_nom
 
         # add candidates for new gas pipelines to achieve full connectivity
 
