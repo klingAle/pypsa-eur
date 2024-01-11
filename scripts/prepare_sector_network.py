@@ -460,7 +460,7 @@ def add_carrier_buses(n, carrier, nodes=None):
 
     n.madd("Bus", nodes, location=location, carrier=carrier, unit=unit)
 
-    # capital cost could be corrected to e.g. 0.2 EUR/kWh * annuity and O&M
+    '''# capital cost could be corrected to e.g. 0.2 EUR/kWh * annuity and O&M
     n.madd(
         "Store",
         nodes + " Store",
@@ -470,6 +470,20 @@ def add_carrier_buses(n, carrier, nodes=None):
         carrier=carrier,
         capital_cost=0.2
         * costs.at[carrier, "discount rate"],  # preliminary value to avoid zeros
+    )'''
+
+    capital_cost = costs.at["gas storage", "fixed"] if carrier == "gas" else 0.02
+
+    n.madd("Bus", nodes, location=location, carrier=carrier, unit=unit)
+
+    n.madd(
+        "Store",
+        nodes + " Store",
+        bus=nodes,
+        e_nom_extendable=True,
+        e_cyclic=True,
+        carrier=carrier,
+        capital_cost=capital_cost,
     )
 
     n.madd(
