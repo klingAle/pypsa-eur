@@ -47,7 +47,7 @@ scenario:
   - ''
   sector_opts:
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq1500
-  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200
+  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200-noH2network
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq70
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq50
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq35
@@ -498,9 +498,9 @@ sector:
   electricity_distribution_grid: true
   electricity_distribution_grid_cost_factor: 1.0
   electricity_grid_connection: true
-  H2_network: False
+  H2_network: true
   gas_network: true
-  H2_retrofit: False
+  H2_retrofit: true
   H2_retrofit_capacity_per_CH4: 0.6
   gas_network_connectivity_upgrade: 1
   gas_distribution_grid: true
