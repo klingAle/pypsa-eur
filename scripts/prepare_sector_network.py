@@ -1856,7 +1856,7 @@ def add_heat(n, costs):
                 lifetime=costs.at[key, "lifetime"],
             )
 
-            key = f"{name_type} gas boiler"
+            '''key = f"{name_type} gas boiler"
 
             n.madd(
                 "Link",
@@ -1870,7 +1870,7 @@ def add_heat(n, costs):
                 efficiency2=costs.at["gas", "CO2 intensity"],
                 capital_cost=costs.at[key, "efficiency"] * costs.at[key, "fixed"],
                 lifetime=costs.at[key, "lifetime"],
-            )
+            )'''
 
         if options["solar_thermal"]:
             n.add("Carrier", name + " solar thermal")
