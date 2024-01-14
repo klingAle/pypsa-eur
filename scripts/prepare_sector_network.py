@@ -1855,7 +1855,7 @@ def add_heat(n, costs):
                 lifetime=costs.at[key, "lifetime"],
             )
 
-            '''key = f"{name_type} gas boiler"
+            '''key = f"{name_type} gHer"
 
             n.madd(
                 "Link",
@@ -1888,6 +1888,15 @@ def add_heat(n, costs):
 
         if options["chp"] and name == "urban central":
             # add gas CHP; biomass CHP is added in biomass section
+            n.madd(
+                "Generator",
+                nodes[name] + " urban central waste heat",
+                bus=nodes[name] + " urban central heat",
+                carrier="urban central waste heat",
+                p_nom_extendable=True,
+                sign=-1
+            )
+
             n.madd(
                 "Link",
                 nodes[name] + " urban central gas CHP",
