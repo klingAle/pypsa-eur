@@ -1893,7 +1893,7 @@ def add_heat(n, costs):
                 nodes[name] + " urban central waste heat",
                 bus=nodes[name] + " urban central heat",
                 carrier="urban central waste heat",
-                p_nom_extendable=True,
+                p_nom_extendable=False,
                 sign=-1
             )
 
