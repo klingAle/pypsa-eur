@@ -46,12 +46,13 @@ scenario:
   opts:
   - ''
   sector_opts:
-  #- Co2L0-3H-T-H-B-I-A-seq1500
+  - Co2L0-3H-T-H-B-I-A-seq1500
   - Co2L0-3H-T-H-B-I-A-seq200
-  #- Co2L0-3H-T-H-B-I-A-seq70
+  - Co2L0-3H-T-H-B-I-A-seq70
   #- Co2L0-3H-T-H-B-I-A-seq50
-  #- Co2L0-3H-T-H-B-I-A-seq40
-  #- Co2L0-3H-T-H-B-I-A-seq37.22
+  - Co2L0-3H-T-H-B-I-A-seq37.22
+  - Co2L0-3H-T-H-B-I-A-seq30
+
 
 
   #- Co2L0-3H-T-H-B-I-A-seq200-noH2network
@@ -461,7 +462,7 @@ sector:
   tes_tau:
     decentral: 3
     central: 180
-  boilers: false
+  boilers: true
   oil_boilers: false
   biomass_boiler: false
   chp: true

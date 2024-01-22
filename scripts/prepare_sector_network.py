@@ -1843,7 +1843,7 @@ def add_heat(n, costs):
 
             key = f"{name_type} gas boiler"
 
-            n.madd(
+            '''n.madd(
                 "Link",
                 nodes[name] + f" {name} gas boiler",
                 p_nom_extendable=True,
@@ -1855,7 +1855,7 @@ def add_heat(n, costs):
                 efficiency2=costs.at["gas", "CO2 intensity"],
                 capital_cost=costs.at[key, "efficiency"] * costs.at[key, "fixed"],
                 lifetime=costs.at[key, "lifetime"],
-            )
+            )'''
 
         if options["solar_thermal"]:
             n.add("Carrier", name + " solar thermal")
@@ -2692,7 +2692,7 @@ def add_industry(n, costs):
             "Generator",
             spatial.oil.nodes,
             bus=spatial.oil.nodes,
-            p_nom_extendable=False,
+            p_nom_extendable=True,
             carrier="oil",
             marginal_cost=costs.at["oil", "fuel"],
         )
