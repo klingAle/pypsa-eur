@@ -989,3 +989,4 @@ plotting:
     DC: "#8a1caf"
     DC-DC: "#8a1caf"
     DC link: "#8a1caf"
+    waste heat: '#ffd4dc'
