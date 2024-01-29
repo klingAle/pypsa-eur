@@ -51,8 +51,8 @@ scenario:
   #- Co2L0-3H-T-H-B-I-A-seq200-noH2network
   - Co2L0-3H-T-H-B-I-A-seq70-noH2network
   #- Co2L0-3H-T-H-B-I-A-seq50-noH2network
-  #- Co2L0-3H-T-H-B-I-A-seq35-noH2network
-  - Co2L0-3H-T-H-B-I-A-seq30-noH2network
+  - Co2L0-3H-T-H-B-I-A-seq35-noH2network
+  #- Co2L0-3H-T-H-B-I-A-seq30-noH2network
   #- Co2L0-3H-T-H-B-I-A-seq35
 
   planning_horizons:
