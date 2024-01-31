@@ -49,10 +49,10 @@ scenario:
   - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq1500
   - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200
   - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq70
-  #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq50
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq59.46
-  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq55
-  #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq30
+  # - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq55 # infeasible
+  #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq50 # infeasible
+  #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq30 # infeasible
 
   planning_horizons:
   # - 2020
