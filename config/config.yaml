@@ -49,7 +49,7 @@ scenario:
   - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq1500-noH2network
   - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200-noH2network
   - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq70-noH2network
-  #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq59.46
+  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq59-noH2network
   # - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq55 # infeasible
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq50 # infeasible
   #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq30 # infeasible
