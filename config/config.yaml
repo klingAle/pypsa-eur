@@ -35,9 +35,9 @@ scenario:
   simpl:
   - ''
   ll:
-  - v1
+  #- v1
   - v1.5
-  - vopt
+  #- vopt
   clusters:
   - 39
   #- 128
@@ -49,7 +49,7 @@ scenario:
   sector_opts:
   #- Co2L0-3H-T-H-B-I-A-seq1500
   - Co2L0-3H-T-H-B-I-A-seq200
-  - Co2L0-3H-T-H-B-I-A-seq200-noH2network
+  #- Co2L0-3H-T-H-B-I-A-seq200-noH2network
   #- Co2L0-3H-T-H-B-I-A-seq70
   #- Co2L0-3H-T-H-B-I-A-seq50
   #- Co2L0-3H-T-H-B-I-A-seq40
@@ -491,7 +491,7 @@ sector:
   co2_sequestration_cost: 10
   co2_spatial: True
   co2network: false
-  cc_fraction: 0.9
+  cc_fraction: 0.8
   hydrogen_underground_storage: false
   hydrogen_underground_storage_locations:
     # - onshore  # more than 50 km from sea
