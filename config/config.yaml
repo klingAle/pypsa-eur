@@ -35,9 +35,9 @@ scenario:
   simpl:
   - ''
   ll:
-  #- v1
+  - v1
   - v1.5
-  #- vopt
+  - vopt
   clusters:
   - 39
   #- 128
