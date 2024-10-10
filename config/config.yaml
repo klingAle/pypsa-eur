@@ -35,7 +35,7 @@ scenario:
   simpl:
   - ''
   ll:
-  - v1
+  #- v1
   - v1.5
   #- vopt
   clusters:
@@ -48,7 +48,7 @@ scenario:
   - ''
   sector_opts:
   - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200-noH2network
-  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200
+  #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200
 
   planning_horizons:
   # - 2020
@@ -284,7 +284,7 @@ load:
   interpolate_limit: 3
   time_shift_for_large_gaps: 1w
   manual_adjustments: true # false
-  scaling_factor: 0.48
+  scaling_factor: 1
 
 # docs
 # TODO: PyPSA-Eur merge issue in prepare_sector_network.py
