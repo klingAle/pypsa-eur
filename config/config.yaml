@@ -35,9 +35,9 @@ scenario:
   simpl:
   - ''
   ll:
-  - v1
+  #- v1
   - v1.5
-  - vopt
+  #- vopt
   clusters:
   - 39
   #- 128
@@ -48,7 +48,7 @@ scenario:
   - ''
   sector_opts:
   - Co2L0-3H-T-H-B-I-A-seq200-noH2network
-  - Co2L0-3H-T-H-B-I-A-seq200
+  #- Co2L0-3H-T-H-B-I-A-seq200
 
 
   planning_horizons:
@@ -285,7 +285,7 @@ load:
   interpolate_limit: 3
   time_shift_for_large_gaps: 1w
   manual_adjustments: true # false
-  scaling_factor: 0.52
+  scaling_factor: 1 # 0.52
 
 # docs
 # TODO: PyPSA-Eur merge issue in prepare_sector_network.py
