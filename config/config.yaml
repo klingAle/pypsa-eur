@@ -35,7 +35,7 @@ scenario:
   simpl:
   - ''
   ll:
-  #- v1
+  - v1
   - v1.5
   #- vopt
   clusters:
@@ -47,7 +47,7 @@ scenario:
   opts:
   - ''
   sector_opts:
-  #- Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200-noH2network
+  - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200-noH2network
   - Co2L0-3H-T-H-B-I-A-solar+p.5-onwind+p0.5-seq200
 
   planning_horizons:
@@ -482,7 +482,7 @@ sector:
   co2_spatial: true
   co2network: false
   cc_fraction: 0.9
-  hydrogen_underground_storage: true
+  hydrogen_underground_storage: false
   hydrogen_underground_storage_locations:
     # - onshore  # more than 50 km from sea
   - nearshore    # within 50 km of sea
