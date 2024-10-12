@@ -492,7 +492,7 @@ sector:
   co2_spatial: True
   co2network: false
   cc_fraction: 0.9
-  hydrogen_underground_storage: false
+  hydrogen_underground_storage: true
   hydrogen_underground_storage_locations:
     # - onshore  # more than 50 km from sea
   - nearshore    # within 50 km of sea
