@@ -47,8 +47,8 @@ scenario:
   opts:
   - ''
   sector_opts:
-  - Co2L0-3H-T-H-B-I-A-seq200-noH2network
-  #- Co2L0-3H-T-H-B-I-A-seq200
+  #- Co2L0-3H-T-H-B-I-A-seq200-noH2network
+  - Co2L0-3H-T-H-B-I-A-seq200
 
 
   planning_horizons:
@@ -483,7 +483,7 @@ sector:
   co2_spatial: True
   co2network: false
   cc_fraction: 0.9
-  hydrogen_underground_storage: false
+  hydrogen_underground_storage: true
   hydrogen_underground_storage_locations:
     # - onshore  # more than 50 km from sea
   - nearshore    # within 50 km of sea
