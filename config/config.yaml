@@ -47,8 +47,8 @@ scenario:
   opts:
   - ''
   sector_opts:
-  - Co2L0-3H-T-H-B-I-A-seq200-noH2network
-  #- Co2L0-3H-T-H-B-I-A-seq200
+  #- Co2L0-3H-T-H-B-I-A-seq200-noH2network
+  - Co2L0-3H-T-H-B-I-A-seq200
 
 
   planning_horizons:
